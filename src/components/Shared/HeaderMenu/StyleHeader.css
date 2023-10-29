@@ -1,0 +1,26 @@
+.displayNavMenu{
+    display: none;
+}
+div .AppBar{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: black;
+    box-shadow: none;
+}
+
+@media (min-width:720px) {
+    .displayNavMenu{
+        display: block;
+    }
+    .displayIconMenu, .displayDrawer{
+        display: none !important;
+    }
+}
+
+@media (min-width:720px) and (max-width: 1028px) {
+    div .AppBar{
+        flex-direction: column;
+    }
+}
