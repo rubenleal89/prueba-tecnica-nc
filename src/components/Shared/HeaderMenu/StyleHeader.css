@@ -10,6 +10,10 @@ div .AppBar{
     box-shadow: none;
 }
 
+.AppBar .css-1mkjez2-MuiContainer-root{
+    padding: 0px;
+}
+
 @media (min-width:720px) {
     .displayNavMenu{
         display: block;
@@ -22,5 +26,11 @@ div .AppBar{
 @media (min-width:720px) and (max-width: 1028px) {
     div .AppBar{
         flex-direction: column;
+    }
+}
+
+@media (min-width:1028px){
+    div .AppBar{
+        justify-content: space-around;
     }
 }
