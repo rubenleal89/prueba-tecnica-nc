@@ -1,5 +1,5 @@
 import { ComponentSharedHeader } from '../../components/Shared/HeaderMenu/Header';
-// import { ComponentSharedFooter } from '../../components/Shared/FooterComponent/Footer';
+import { ComponentSharedFooter } from '../../components/Shared/FooterComponent/Footer';
 import { Container, CssBaseline } from '@mui/material';
 import { IntNavListProps } from '../../utils/interface';
 
@@ -10,11 +10,11 @@ export const PageHome = ({ NavArrLink }: IntNavListProps) => {
       <CssBaseline />
       <ComponentSharedHeader NavArrLink={NavArrLink}/>
 
-      <Container sx={{ mt:5 }}>
+      <Container >
+        PageHome
       </Container>
-      {/* <hr />
+      
       <ComponentSharedFooter />
-      <hr /> */}
     </>
   )
 }

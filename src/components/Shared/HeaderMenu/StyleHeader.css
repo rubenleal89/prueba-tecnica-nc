@@ -14,8 +14,8 @@ div .AppBar{
     .displayNavMenu{
         display: block;
     }
-    .displayIconMenu, .displayDrawer{
-        display: none !important;
+    .MuiContainer-root .displayIconMenu, .displayDrawer{
+        display: none;
     }
 }
 
