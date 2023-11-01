@@ -1,0 +1,91 @@
+
+.containerBgImg{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 330px;
+}
+
+.containerText{
+    background-color: #E5E9EC;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.containerText p{
+    text-align: justify;
+}
+
+.containerTitle{
+    font-weight: bolder;
+    color: #66CCCC;
+    background-color: #666666;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.ContainerGrid .containerBlue{
+    background-color: #669999;
+    color:white;
+}
+
+.ColorBlueTitle h2{
+    color: #65CACA;
+    font-size: 16px;
+}
+
+.ContainerGridBlue{
+    background-color: #669999;
+}
+
+@media (min-width:720px) {
+    .ContainerGrid.ContainerGridBlue{
+        display: grid;
+        grid-template-areas: 
+            "GridAreaText1 GridAreaText2 GridAreaText3"
+            "GridAreaText1 GridAreaText2 GridAreaText3";
+    }
+    .GridAreaText1{grid-area:GridAreaText1}
+    .GridAreaText2{grid-area:GridAreaText2}
+    .GridAreaText3{grid-area:GridAreaText3}
+
+    .ColorBlueTitle h2{
+        font-size: 24px;
+    }
+}
+
+@media (min-width:1028px) {
+
+    .MuiContainer-root.containerBgImg{
+        height: auto;
+    }
+
+    .seccionOnePrevention{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1, 33.33vw);
+    }
+
+    .containerText p,
+    .MuiTypography-root.ListCheckIcon{
+        font-size: 1.2vw;
+    }
+
+    .containerText{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .containerTitle{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .MuiContainer-root.MuiContainer-maxWidthLg.ContainerGrid{
+        display: grid;
+        max-width: 100%;
+    }
+    
+}

@@ -3,6 +3,7 @@ import { ComponentSharedFooter } from '../../components/Shared/FooterComponent/F
 import { Container, CssBaseline } from '@mui/material';
 import { IntNavListProps } from '../../utils/interface';
 import { ComponentBenefit } from '../../components/BenefitSection/Benefit';
+import { ComponentPrevention } from '../../components/PreventionSection/Prevention';
 
 
 export const PageHome = ({ NavArrLink }: IntNavListProps) => {
@@ -12,6 +13,7 @@ export const PageHome = ({ NavArrLink }: IntNavListProps) => {
       <ComponentSharedHeader NavArrLink={NavArrLink}/>
 
       <ComponentBenefit />
+      <ComponentPrevention />
       
       <ComponentSharedFooter />
     </>
