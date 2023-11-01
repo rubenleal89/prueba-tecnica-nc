@@ -1,8 +1,8 @@
 import { Container } from "@mui/material";
 import { IntMultContainersProps } from '../../../utils/interface';
-import './StyleThreeContainer.css';
+import './StyleMultiContainer.css';
 
-export const ThreeContainer = ({arrContenido, colums, rows, ClassContPrin}:IntMultContainersProps) => {
+export const MultiContainer = ({arrContenido, colums, rows, ClassContPrin}:IntMultContainersProps) => {
 
     const RowSizeCalcu = `calc(100vw / ${colums})`
 

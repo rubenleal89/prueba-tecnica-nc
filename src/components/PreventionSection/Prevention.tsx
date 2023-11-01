@@ -1,7 +1,7 @@
 import './StylePrevention.css';
 import { Container, List, ListItem, Stack, Typography } from '@mui/material';
 import  {CheckBoxOutlineBlankSharp, CheckSharp } from '@mui/icons-material';
-import { ThreeContainer } from '../Shared/ThreeContainerComponent/ThreeContainer';
+import { MultiContainer } from '../Shared/MultiContainer/MultiContainer';
 import { contMultContainers } from '../../utils/interface';
 import { TresMujeres, ParejaAdultoMayor } from '../../assets/index';
 
@@ -56,9 +56,7 @@ export const ComponentPrevention = () => {
     },
   ]
 
-  const arrContenido3:contMultContainers[] = [
-    
-  ]
+  
 
   return (
     <>
@@ -100,8 +98,8 @@ export const ComponentPrevention = () => {
 
       </div>
 
-      <ThreeContainer arrContenido={arrContenido1} colums={3} rows={1} />
-      <ThreeContainer arrContenido={arrContenido2} colums={3} rows={1} ClassContPrin="ContainerGridBlue" />
+      <MultiContainer arrContenido={arrContenido1} colums={3} rows={1} />
+      <MultiContainer arrContenido={arrContenido2} colums={3} rows={1} ClassContPrin="ContainerGridBlue" />
 
     </>
   )
