@@ -4,4 +4,9 @@ export { default as MadreHija } from './ImgFondo/pg1-madre-hija.png';
 export { default as ParejaAdultoMayor } from './ImgFondo/pg1-pareja-adulto-mayor.png';
 export { default as ReunionFamiliar } from './ImgFondo/pg1-reunion-familiar.png';
 export { default as MujerBurbujas2 } from './ImgFondo/mujer-burbujas-de-jabón.png';
+
+export { default as MadreHijaPG2 } from './ImgFondo/pg2-madre-hija.png';
+export { default as EnfermeraAbuelitaPG2 } from './ImgFondo/pg2-enfermera-abuelita.png';
+export { default as EnfermeraSeñorPG2 } from './ImgFondo/pg2-enfermera-señor.png';
+
 export { default as IconPrincipal } from './icon/icono.png';

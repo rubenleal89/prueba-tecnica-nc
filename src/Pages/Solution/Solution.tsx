@@ -1,6 +1,8 @@
-import { Container, CssBaseline } from '@mui/material';
+import { CssBaseline } from '@mui/material';
 import { ComponentSharedFooter, ComponentSharedHeader } from '../../components/Shared';
 import { IntNavListProps } from '../../utils/interface';
+import { SectBenefitSolution } from '../../components/CompPageSolution/BenefitSolution/SectBenefit.tsx';
+import { SectSolution } from '../../components/CompPageSolution/SolutionsSection/SectSolution.tsx';
 
 export const PageSolution = ({ NavArrLink }: IntNavListProps) => {
   return (
@@ -8,9 +10,8 @@ export const PageSolution = ({ NavArrLink }: IntNavListProps) => {
       <CssBaseline />
       <ComponentSharedHeader NavArrLink={NavArrLink}/>
       
-      <Container >
-        PageSolution
-      </Container>
+      <SectBenefitSolution />
+      <SectSolution />
       
       <ComponentSharedFooter />
     </>
