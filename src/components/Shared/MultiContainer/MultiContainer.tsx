@@ -9,13 +9,13 @@ export const MultiContainer = ({arrContenido, colums, rows, ClassContPrin}:IntMu
   return (
     <Container 
         sx={{
-            gridTemplateColumns:`repeat(${colums}, 33.33vw)`,
+            gridTemplateColumns:`repeat(${colums}, 1fr)`,
             gridTemplateRows:`repeat(${rows},${RowSizeCalcu})`
         }}
-        className={`ContainerGrid ${ClassContPrin}`}
+        className={`ContainerGrid ${ClassContPrin ?ClassContPrin : ""}`}
     >
         {
-            arrContenido.map(({ContainerTitle, ContainerText,img, classCont}, index) => {
+            arrContenido.map(({Icon, ContainerTitle, ContainerText,img, classCont}, index) => {
                 if (img !== undefined && img.length > 5) {
                     return (
                     <Container
@@ -27,6 +27,7 @@ export const MultiContainer = ({arrContenido, colums, rows, ClassContPrin}:IntMu
                 }
                 return (
                     <Container className={classCont} key={index} sx={{display:"flex"}}>
+                        {Icon === undefined || Icon.length === 0 ? <></> : Icon }
                         {ContainerTitle === undefined || ContainerTitle.length === 0 ? <></> : <h2>{ContainerTitle}</h2> }
                         {ContainerText === undefined || ContainerText.length === 0 ? <></> : <p>{ContainerText}</p> }
                     </Container>

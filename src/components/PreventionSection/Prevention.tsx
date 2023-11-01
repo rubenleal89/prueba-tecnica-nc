@@ -1,62 +1,51 @@
 import './StylePrevention.css';
 import { Container, List, ListItem, Stack, Typography } from '@mui/material';
-import  {CheckBoxOutlineBlankSharp, CheckSharp } from '@mui/icons-material';
+import  {CheckBoxOutlineBlankSharp, CheckSharp, EditCalendar, FavoriteSharp, HomeSharp } from '@mui/icons-material';
 import { MultiContainer } from '../Shared/MultiContainer/MultiContainer';
 import { contMultContainers } from '../../utils/interface';
-import { TresMujeres, ParejaAdultoMayor } from '../../assets/index';
+import { TresMujeres, MadreHija, EnfermeraAbuelita, ReunionFamiliar, IconPrincipal } from '../../assets/index';
+import { arrContenido1, arrContenido2, arrList } from './ArrContCard';
 
 export const ComponentPrevention = () => {
 
-  const arrList = [
+  const arrContenido3:contMultContainers[] = [
     {
-      Id:"text1",
-      text:"La prise en charge des déterminants de la fragilité peut réduire ou retarder ses conséquences.",
-    },
-    {
-      Id:"text2",
-      text:"La fragilité précède la perte d'autonomie.",
-    },
-    {
-      Id:"text3",
-      text:"Le repérage de la fragilité permet d'identifier un état de 'pré-dépendance'."
-    },
-  ]
+      Icon:<EditCalendar />,
+      ContainerTitle:"IDENTIFIER LES ANOMALIES AVANT LES SITUATIONS D'URGENCE!",
+      ContainerText:`IDP Santé utilise des données de capteurs en temps réel et des algorithmes intelligents pour établir des modèles d'activité et identifier les anomalies et les situations d'urgence.
 
-  const arrContenido1:contMultContainers[] = [
-    {
-      ContainerTitle: "CRITÈRES DE FRIED",
-      ContainerText: "Le modèle repose sur une analyse des changements physiologiques, provoqués par la sénescence et les changements musculaires liés au vieillissement. Le phénotype de fragilité identifié par Fried comporte les cinq dimensions suivantes : perte de poids non intentionnelle, force de préhension, vitesse de marche, fatigue, faible activité physique.",
-      classCont:"containerText ColorBlueTitle"
+      Les données sont regroupées dans un outil de visualisation et d'aide à la décision à destination des professionnels de santé dans le cadre du suivi de l'autonomie d'un résident, de la rééducation d'un patient et dans une application, pour permette aux aidants familiaux de suivre les évolutions, d'être immédiatement informés ce cas d'anomalie, de renforcer les liens sociaux avec leurs proches et d'optimiser le partage d'informations des différents intervenants au domicile.
+      
+      Les aidants reçoivent un aperçu de l'état de santé de leur proche et les activités de leur vie quotidienne.`,
+      classCont:"containerText SaltoLinea"
     },
     {
-      ContainerTitle: "LES CRITÈRES DE LA FRAGILITÉ",
-      classCont:"containerTitle"
+      img:`url(${MadreHija})`,
+      classCont:"containerBgImg"
     },
     {
-      img:`url(${ParejaAdultoMayor})`,
+      img:`url(${EnfermeraAbuelita})`,
+      classCont:"containerBgImg displayImg"
+    },
+    {
+      Icon:<FavoriteSharp />,
+      ContainerTitle:"AMÉLIORER LA QUALITÉ DU SUIVI DES PERSONNES AGÉES",
+      ContainerText:"Que vous soyez un aidant, un professionnel de santé ou employé dans des résidences pour personnes âgées, la plupart des technologies permettent de surveiller les évènements, comme l'ouverture des portes, la présence au lit, la fréquence cardiaque, etc, mais elles ne sont pas capable d'identifier les signaux faibles, les évolutions imperceptibles à l'œil dans les habitudes d'une personne, qui pourraient indiquer un changement dans le temps plus important dans sa santé ou son état fonctionnel.",
+      classCont:"containerText SaltoLinea"
+    },
+    {
+      Icon:<HomeSharp />,
+      ContainerTitle:"AMÉLIORER LE MAINTIEN À DOMICILE",
+      ContainerText:`La solution IDP Santé mesure vos indicateurs de robustesse, surveille vos habitudes de vie et utilise l'intelligence artificielle pour apprendre les habitudes quotidiennes uniques de chaque individu.
+
+      L'analyse personnalisée des tendances et la détection précoce des changements de l'état de robustesse et dans les activités de la vie quotidienne fournissent aux professionnels de santé des données factuelles permettant la mise en place d'un parcours spécifiquement adapté et améliorer la qualité des soins.`,
+      classCont:"containerText SaltoLinea"
+    },
+    {
+      img:`url(${ReunionFamiliar})`,
       classCont:"containerBgImg"
     },
   ]
-
-  const arrContenido2:contMultContainers[] = [
-    {
-      ContainerTitle: "ACCENTUER LA PRÉVENTION",
-      ContainerText: "IDP SANTE développe des solutions digitales intelligentes pour quantifier le comportement, détecter les changements de l'état de santé, la dynamique des personnes et les accompagner dans un programme de soins personnalisé. Ces informations permettent aux familles, aux professionnels de santé, aux associations, aux services de soins à domicile, d'être plus proactifs en prenant soin de leurs résidents âgés.",
-      classCont:"containerBlue containerText GridAreaText1"
-    },
-    {
-      ContainerTitle: "FACILITER LA DÉTECTION ET PRÉVENIR LES RISQUES",
-      ContainerText: "Grâce à un suivi continu à l'intérieur ou à l'extérieur du domicile, un apprentissage automatique approfondi et une analyse prédictive, IDP Sante fournit des informations précieuses sur les changements dans les activités importantes de la vie quotidienne.",
-      classCont:"containerBlue containerText GridAreaText2"
-    },
-    {
-      ContainerTitle: "ANTICIPER LA DÉGRADATION DE L'ÉTAT DE SANTÉ DES PERSONNES",
-      ContainerText: "Les algorithmes d'intelligence artificielle artificielle fournissent des éléments synthétiques et factuels sur l'évolution de l'état du patient et apportent de puissantes analyses prédictives des dégradations imminentes de la santé ou de l'état fonctionnel. Ces données exploitables mettent en évidence des tendances qui pourraient mener à des problèmes plus conséquents, telles que l'augmentation du risque de chute, les infections des voies urinaires, la malnutrition, la dépression, etc.",
-      classCont:"containerBlue containerText GridAreaText3"
-    },
-  ]
-
-  
 
   return (
     <>
@@ -68,7 +57,7 @@ export const ComponentPrevention = () => {
         
           <p>
             Une équipe de chercheurs pluridisciplinaires dirigée par le Professeur 
-            Pierre-Paul Vidal a développé un système de détection des signaux faibles 
+            Pierre-Paul Vidal a développé un système de détection des signaux faibles
             de la pré-fragilité basé sur les travaux de Linda Fried.
           </p>
           <Typography margin="20px 0">
@@ -100,6 +89,12 @@ export const ComponentPrevention = () => {
 
       <MultiContainer arrContenido={arrContenido1} colums={3} rows={1} />
       <MultiContainer arrContenido={arrContenido2} colums={3} rows={1} ClassContPrin="ContainerGridBlue" />
+      <MultiContainer arrContenido={arrContenido3} colums={2} rows={3} ClassContPrin='ContainerAreaEnd' />
+
+      <Container sx={{display:"flex", flexDirection:"column",alignItems:"center", padding:"40px", textAlign:"center"}}>
+        <img src={IconPrincipal} alt="IconPrincipal" />
+        <h2>NOUS PRESERVOND VOTRE ROBUSTESSE</h2>
+      </Container>
 
     </>
   )

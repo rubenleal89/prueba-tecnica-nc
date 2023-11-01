@@ -9,6 +9,7 @@ export interface IntNavListProps {
   }
 
 export interface contMultContainers {
+    Icon?:any;
     ContainerTitle?: string;
     ContainerText?: string;
     img?:string;

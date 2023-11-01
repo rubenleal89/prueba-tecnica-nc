@@ -39,20 +39,48 @@
     background-color: #669999;
 }
 
+.containerBgImg.displayImg{
+    display: none;
+}
+
+.containerText.SaltoLinea p{
+    white-space: pre-line
+}
+
+.containerText.SaltoLinea {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}  
+
 @media (min-width:720px) {
     .ContainerGrid.ContainerGridBlue{
         display: grid;
         grid-template-areas: 
-            "GridAreaText1 GridAreaText2 GridAreaText3"
-            "GridAreaText1 GridAreaText2 GridAreaText3";
+        "GridAreaText1 GridAreaText2 GridAreaText3"
+        "GridAreaText1 GridAreaText2 GridAreaText3";
     }
     .GridAreaText1{grid-area:GridAreaText1}
     .GridAreaText2{grid-area:GridAreaText2}
     .GridAreaText3{grid-area:GridAreaText3}
-
+    
     .ColorBlueTitle h2{
         font-size: 24px;
     }
+    
+    .MuiContainer-root.MuiContainer-maxWidthLg.ContainerGrid.ContainerAreaEnd{
+        display: grid;
+        grid-template-rows: repeat(3,1fr);
+    }
+
+    .containerBgImg{
+        height: auto;
+    }
+
+    .containerBgImg.displayImg{
+        display: block;
+    }  
 }
 
 @media (min-width:1028px) {
@@ -86,6 +114,10 @@
     .MuiContainer-root.MuiContainer-maxWidthLg.ContainerGrid{
         display: grid;
         max-width: 100%;
+    }
+
+    .MuiContainer-root.MuiContainer-maxWidthLg.ContainerGrid.ContainerAreaEnd{
+        grid-template-rows: repeat(3,calc(100vw / 2));
     }
     
 }
